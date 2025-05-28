@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Buoi5.Models.Grade>
+
+<h2>Danh sách lớp học</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Grade ID</th>
+            <th>Grade Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var grade in Model)
+        {
+            <tr>
+                <td>@grade.GradeId</td>
+                <td>@grade.GradeName</td>
+            </tr>
+        }
+    </tbody>
+</table>

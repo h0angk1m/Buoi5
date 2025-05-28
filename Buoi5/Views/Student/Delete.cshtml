@@ -1,0 +1,17 @@
+﻿@model Buoi5.Models.Student
+
+@{
+    ViewBag.Title = "Xóa học sinh";
+}
+
+<h2>Xác nhận xóa học sinh</h2>
+
+<div class="alert alert-danger">
+    Bạn có chắc chắn muốn xóa học sinh: <strong>@Model.FirstName @Model.LastName</strong>?
+</div>
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="StudentId" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
